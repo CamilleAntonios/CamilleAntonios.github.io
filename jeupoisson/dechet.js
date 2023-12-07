@@ -3,7 +3,7 @@ class Dechet {
     static DECHET_SPEED=3
     static gapFromSides=200
     static DEFAULT_TOP_GAP=0
-    static dechetsDibujos=["./dibujos/dechet1.png","./dibujos/dechet2.png","./dibujos/dechet3.png","./dibujos/dechet4.png","./dibujos/dechet5.png"]
+    static dechetsDibujos=["./dibujos/dechet1.png","./dibujos/dechet2.png","./dibujos/dechet3.png","./dibujos/dechet5.png"]
     constructor() {
         this.isActive=true
         Dechet.dechetCounter++
@@ -17,7 +17,7 @@ class Dechet {
 
         $("#ocean").append(this.elDechet)
 
-        this.elDechet.css("background-image", "url('"+Dechet.dechetsDibujos[Dechet.getRandomIntDibujo(5)]+"')")
+        this.elDechet.css("background-image", "url('"+Dechet.dechetsDibujos[Dechet.getRandomIntDibujo(4)]+"')")
 
         this.width=this.elDechet.width()
         this.height=this.elDechet.height()
