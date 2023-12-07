@@ -28,6 +28,7 @@ var dechetListe=[]
 
 let displayMethodsToCall=[]
 
+
 $(() => {
     poissonClass=new Poisson($("#poisson"))
     elOcean=$("#ocean")
@@ -54,7 +55,7 @@ function mort(){
     poissonClass.elPoisson.css("transform", "rotate(-1530deg)")
     poissonClass.elPoisson.css("filter", "grayscale(100%)")
     setTimeout(() => {
-        poissonClass.elPoisson.css("background-image", 'url("./poissong-mort.png")')
+        poissonClass.elPoisson.css("background-image", 'url("./dibujos/poissong-mort.png")')
     }, 1000)
     setTimeout(() => {
         poissonClass.elPoisson.css("opacity", "0.0")
