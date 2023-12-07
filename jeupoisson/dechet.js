@@ -31,17 +31,22 @@ class Dechet {
         return Math.floor(Math.random() * (max - min + 1)) + min;
     }
 
-    loop() {
+    display(dechetParam) {
+        dechetParam.elDechet.css("top", dechetParam.y + Dechet.DECHET_SPEED + "px")
+    }
+
+    computeNextDisplay() {
         if(this.isActive) {
             let topOffset = retrieveValueWithoutPx(this.elDechet.css("top"))
             if (topOffset <= window.innerHeight - this.elDechet.height()) {
-                this.elDechet.css("top", topOffset + Dechet.DECHET_SPEED + "px")
                 this.y=topOffset+Dechet.DECHET_SPEED
             }
             else {
                 this.isActive=false
             }
         }
+
+        return this.display
     }
 
     pointDansRectangle(point, rectangle) {
