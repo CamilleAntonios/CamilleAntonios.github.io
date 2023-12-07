@@ -9,6 +9,9 @@ const FRAMERATE=60
 const horizontalPoissonSpeed=9
 const verticalPoissonSpeed=4
 
+let addDechetsInterval
+let loopInterval
+
 let goLeft=false
 let goRight=false
 let goUp=false
@@ -37,9 +40,9 @@ $(() => {
         poissonClass.receiveKeyUp(e)
     })
 
-    setInterval(addNewDechetToList, 1500)
+    addDechetsInterval=setInterval(addNewDechetToList, 1500)
 
-    setInterval(loop, 1000/FRAMERATE)
+    loopInterval=setInterval(loop, 1000/FRAMERATE)
 
 })
 function fonctionVictoire(){
@@ -63,10 +66,13 @@ function loop() {
         displayMethodsToCall.push(dechet.computeNextDisplay())
         collisionDetectee=dechet.checkCollision(poissonClass)
         if(collisionDetectee) {
-            mort();
-            clearInterval(loop)
+            mort()
+            $(".dechet").css("visibility", "hidden")
             dechetListe=[]
-            clearInterval(addNewDechetToList)
+            clearInterval(loopInterval)
+            clearInterval(addDechetsInterval)
+            console.log("cleared interval")
+            return
         }
     }
     displayMethodsToCall[0](poissonClass)
@@ -78,8 +84,9 @@ function loop() {
 
     if (poissonClass.isVictoire){
         fonctionVictoire()
-        clearInterval(loop)
+        clearInterval(loopInterval)
+        $(".dechet").css("visibility", "hidden")
         dechetListe=[]
-        clearInterval(addNewDechetToList)
+        clearInterval(addDechetsInterval)
     }
 }
