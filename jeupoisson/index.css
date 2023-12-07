@@ -13,7 +13,11 @@ html, body {
     margin: 0;
     overflow: hidden;
 }
-
+body{
+    background-image: url("./background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 #poisson {
     width: 100px;
     height: 60px;
@@ -28,7 +32,7 @@ html, body {
 
 #ocean {
     width: 100%;
-    background: blue;
+    /*background: blue;*/
     height: 90%;
     top: 100px;
 }
@@ -37,7 +41,7 @@ html, body {
     height: 100px;
     width: 100%;
     bottom: 0px;
-    background: #debe5f;
+    /*background: #debe5f;*/
 }
 
 @keyframes  oceanUpAndDown {
@@ -59,7 +63,7 @@ html, body {
 #soleil {
     width: 100px;
     height: 100px;
-    background: yellow;
+    /*background: yellow;*/
     right: 0;
     top: 0;
 }
