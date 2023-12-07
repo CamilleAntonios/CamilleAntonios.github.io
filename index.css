@@ -1,0 +1,28 @@
+body{
+    background-color: aqua;
+}
+
+#grilleJeux{
+    grid-template-columns: 2;
+    grid-template-rows: 2;
+} 
+
+#memory{
+    grid-column: 1;
+    grid-row: 1;
+}
+
+#pendu{
+    grid-column: 2;
+    grid-row: 1;
+}
+
+#jeuPoisson{
+    grid-column: 1;
+    grid-row: 1;
+}
+
+#cliquerNettoyer{
+    grid-column: 2;
+    grid-row: 2;
+}
