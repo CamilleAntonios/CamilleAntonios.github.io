@@ -1,3 +1,7 @@
+* {
+    font-family: "Poppins", sans-serif;
+}
+
 body{
     display: grid;
     background-color: #f1cdc0;
@@ -10,7 +14,7 @@ header{
 }
 
 h1{
-    font-family: Impact, fantasy;
+    /*font-family: Impact, fantasy;*/
     text-align: center;
     color: #3dae91;
 }
@@ -20,10 +24,14 @@ h1{
     display: grid;
     grid-template-columns: 2;
     grid-template-rows: 2;
-} 
+}
+
+#grilleJeux>div:hover {
+    cursor: pointer;
+}
 
 #memory{
-    font-family: Palatino, URW Palladio L, sans-serif;
+    /*font-family: Palatino, URW Palladio L, sans-serif;*/
     color: #3dae91;
     text-align: center;
     grid-column: 1;
@@ -31,7 +39,7 @@ h1{
 }
 
 #pendu{
-    font-family: Palatino, URW Palladio L, sans-serif;
+    /*font-family: Palatino, URW Palladio L, sans-serif;*/
     color: #3dae91;
     text-align: center;
     grid-column: 2;
@@ -39,7 +47,7 @@ h1{
 }
 
 #jeuPoisson{
-    font-family: Palatino, URW Palladio L, sans-serif;
+    /*font-family: Palatino, URW Palladio L, sans-serif;*/
     color: #3dae91;
     text-align: center;
     grid-column: 1;
@@ -47,7 +55,7 @@ h1{
 }
 
 #cliquerNettoyer{
-    font-family: Palatino, URW Palladio L, sans-serif;
+    /*font-family: Palatino, URW Palladio L, sans-serif;*/
     color: #3dae91;
     text-align: center;
     grid-column: 2;
@@ -78,7 +86,7 @@ h1{
     grid-row: 3;
     border: solid #3dae91;
     position: relative;
-    font-family: Palatino, URW Palladio L, sans-serif;
+    /*font-family: Palatino, URW Palladio L, sans-serif;*/
     color: #3dae91;
     width: 300px;
     border-radius: 7px;

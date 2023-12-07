@@ -1,3 +1,7 @@
+* {
+    font-family: "Poppins", sans-serif;
+}
+
 body {
     margin: 0;
     overflow: hidden;
@@ -29,5 +33,5 @@ body {
     padding-bottom: 1px;
     background-color: #3dae91;
     border-radius: 30px;
-    font-family: cursive;
+    /*font-family: cursive;*/
 }
