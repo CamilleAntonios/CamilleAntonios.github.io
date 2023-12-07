@@ -7,8 +7,8 @@ class Poisson {
         this.goDown=false
         this.elPoisson=elementPoisson //jquery object
 
-        this.x=Number(this.elPoisson.css("left").split("p")[0])
-        this.y=Number(this.elPoisson.css("top").split("p")[0])
+        this.x=retrieveValueWithoutPx(this.elPoisson.css("left"))
+        this.y=retrieveValueWithoutPx(this.elPoisson.css("top"))
 
         this.width=this.elPoisson.width()
         this.height=this.elPoisson.height()
@@ -19,8 +19,8 @@ class Poisson {
     }
 
     loop() {
-        let leftOffset=Number(this.elPoisson.css("left").split("p")[0])
-        let topOffset=Number(this.elPoisson.css("top").split("p")[0])
+        let leftOffset=retrieveValueWithoutPx(this.elPoisson.css("left"))
+        let topOffset=retrieveValueWithoutPx(this.elPoisson.css("top"))
 
 
         if(goLeft && leftOffset>=horizontalPoissonSpeed) {

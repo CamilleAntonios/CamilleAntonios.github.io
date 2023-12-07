@@ -3,7 +3,7 @@ const leftArrowCode=37
 const upArrowCode=38
 const downArrowCode=40
 
-const MAX_DECHETS_DISPLAYED=10
+const MAX_DECHETS_DISPLAYED=5
 const FRAMERATE=30
 
 const horizontalPoissonSpeed=9
@@ -44,7 +44,7 @@ $(() => {
     setInterval(() => {
         dechetListe.push(new Dechet())
         if(dechetListe.length>MAX_DECHETS_DISPLAYED) {
-            $("#"+dechetListe[0].elDechet.attr("id")).remove()
+            //$("#"+dechetListe[0].elDechet.attr("id")).remove()
             dechetListe.shift()
         }
     }, 1000)
@@ -61,4 +61,3 @@ function loop() {
     }
     setTimeout(() => requestAnimationFrame(loop), 1000/FRAMERATE)
 }
-

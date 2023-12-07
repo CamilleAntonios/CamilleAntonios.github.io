@@ -14,10 +14,11 @@ class Dechet {
         this.elDechet.css("left", this.x + "px")
         this.elDechet.css("top", this.y+"px")
 
+        $("body").append(this.elDechet)
+
+
         this.width=this.elDechet.width()
         this.height=this.elDechet.height()
-
-        $("body").append(this.elDechet)
     }
 
     static generateRandomPosition() {
@@ -43,18 +44,44 @@ class Dechet {
         }
     }
 
-    checkCollision(poisson) {//chat gpt
-        //TODO : Regler le bug de collision qui marche mal horizontalement
-        const chevauchementHorizontal =
-            this.x < poisson.x + poisson.width &&
-            this.x + this.width > poisson.x;
-
-        // Vérifier si les blocs se chevauchent sur l'axe vertical
-        const chevauchementVertical =
-            this.y < poisson.y + poisson.height &&
-            this.y + this.height > poisson.y;
-
-        // Retourner vrai si les deux chevauchements sont vrais, indiquant une collision
-        return chevauchementHorizontal && chevauchementVertical;
+    pointDansRectangle(point, rectangle) {
+        return (
+            point.x >= rectangle.x &&
+            point.x <= rectangle.x + rectangle.width &&
+            point.y >= rectangle.y &&
+            point.y <= rectangle.y + rectangle.height
+        );
     }
+
+    checkCollision(poisson) {
+        // Coordonnées des coins du bloc
+        const coinHautGaucheBloc = { x: this.x, y: this.y };
+        const coinHautDroiteBloc = { x: this.x + this.width, y: this.y };
+        const coinBasGaucheBloc = { x: this.x, y: this.y + this.height };
+        const coinBasDroiteBloc = { x: this.x + this.width, y: this.y + this.height };
+
+        // Coordonnées des coins du poisson
+        const coinHautGauchePoisson = { x: poisson.x, y: poisson.y };
+        const coinHautDroitePoisson = { x: poisson.x + poisson.width, y: poisson.y };
+        const coinBasGauchePoisson = { x: poisson.x, y: poisson.y + poisson.height };
+        const coinBasDroitePoisson = { x: poisson.x + poisson.width, y: poisson.y + poisson.height };
+
+        // Vérifier si l'un des coins du bloc est à l'intérieur du poisson
+        const coinDansPoisson =
+            this.pointDansRectangle(coinHautGaucheBloc, poisson) ||
+            this.pointDansRectangle(coinHautDroiteBloc, poisson) ||
+            this.pointDansRectangle(coinBasGaucheBloc, poisson) ||
+            this.pointDansRectangle(coinBasDroiteBloc, poisson);
+
+        // Vérifier si l'un des coins du poisson est à l'intérieur du bloc
+        const coinDansBloc =
+            this.pointDansRectangle(coinHautGauchePoisson, this) ||
+            this.pointDansRectangle(coinHautDroitePoisson, this) ||
+            this.pointDansRectangle(coinBasGauchePoisson, this) ||
+            this.pointDansRectangle(coinBasDroitePoisson, this);
+
+        // Retourner vrai si l'un des coins est à l'intérieur de l'autre forme, indiquant une collision
+        return coinDansPoisson || coinDansBloc;
+    }
+
 }
