@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Pendu trop cool</title>
+  <link rel="stylesheet" href="pendu.css">
+</head>
+<body>
+  <h1 id="pendu-titre">Jouons au pendu !</h1>
+  <button id="jouer"> Jouer</button>
+  <div class="notDisplay" id="gauche">
+     <div class="pendu"> 
+            <img id="img" title="titre" src="./images/tree1.png">
+     </div>
+    </div>
+
+  <div class="notDisplay" id="centre">
+      <div id="motad"></div>
+  </div>
+
+  <div class="notDisplay" id="droite">
+      <div class="grille-lettre">
+        <button class="lettre" id="A">A</button>
+        <button class="lettre" id="Z">Z</button>
+        <button class="lettre" id="E">E</button>
+        <button class="lettre" id="R">R</button>
+        <button class="lettre" id="T">T</button>
+        <button class="lettre" id="Y">Y</button> 
+        <button class="lettre" id="U">U</button>  
+        <button class="lettre" id="I">I</button> 
+        <button class="lettre" id="O">O</button>
+        <button class="lettre" id="P">P</button>
+        <button class="lettre" id="Q">Q</button>
+        <button class="lettre" id="S">S</button>
+        <button class="lettre" id="D">D</button>
+        <button class="lettre" id="F">F</button>
+        <button class="lettre" id="G">G</button>
+        <button class="lettre" id="H">H</button>
+        <button class="lettre" id="J">J</button>
+        <button class="lettre" id="K">K</button>
+        <button class="lettre" id="L">L</button>
+        <button class="lettre" id="M">M</button> 
+        <button class="lettre" id="W">W</button>
+        <button class="lettre" id="X">X</button>
+        <button class="lettre" id="C">C</button> 
+        <button class="lettre" id="V">V</button>
+        <button class="lettre" id="B">B</button>
+        <button class="lettre" id="N">N</button>
+      </div>
+    </div>
+  <div id="modal-gagner" class="modal">
+    <div class="modal-content">
+      <p class="text-modal">C'est gagné</p>
+      <button class="rejouer">Rejouer</button>
+    </div>
+  
+  </div>
+
+  <div id="modal-perdre" class="modal">
+
+    <div class="modal-content">
+      <p class="text-modal">C'est perdu... Le mot était: </p>
+      <p class="text-modal" id="motsiperdu"></p>
+      <button class="rejouer">Rejouer</button>
+    </div>
+  
+  </div>
+
+  <div id="modal-warning">
+    Veuillez entrer une lettre
+  </div>
+
+  <script src="pendu.js" defer></script>
+</body>
+
+</html>
