@@ -12,6 +12,7 @@ class Poisson {
 
         this.width=this.elPoisson.width()
         this.height=this.elPoisson.height()
+        this.isVictoire=false
     }
 
     get element() {
@@ -82,5 +83,19 @@ class Poisson {
                 goDown=false
                 break
         }
+    }
+    getIsVictoire(){
+        return this.isVictoire;
+    }
+    victoire(){
+        if ((this.x+this.width)==window.innerWidth){
+            this.isVictoire=true;
+            
+        }
+        
+    
+    }
+    getPos(){
+        console.log("coordonnées: ("+this.x+" ,"+this.y+")\n");
     }
 }

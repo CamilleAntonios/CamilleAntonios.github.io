@@ -40,7 +40,7 @@ $(() => {
     })
 
     requestAnimationFrame(loop)
-
+    
     setInterval(() => {
         dechetListe.push(new Dechet())
         if(dechetListe.length>MAX_DECHETS_DISPLAYED) {
@@ -48,8 +48,15 @@ $(() => {
             dechetListe.shift()
         }
     }, 1000)
+    
 })
+function fonctionVictoire(){
+    
+    document.getElementById("modal").style.visibility="visible";
+    console.log("soy aqui")
 
+
+}
 function loop() {
     poissonClass.loop()
     for(let dechet of dechetListe) {
@@ -59,5 +66,13 @@ function loop() {
             alert("COLLISION OMG LE POISSONGGG")
         }
     }
-    setTimeout(() => requestAnimationFrame(loop), 1000/FRAMERATE)
+    poissonClass.victoire()
+    if (!poissonClass.getIsVictoire()){
+        setTimeout(() => requestAnimationFrame(loop), 1000/FRAMERATE)
+    }
+    else{
+        fonctionVictoire()
+    }
+    
+    
 }
