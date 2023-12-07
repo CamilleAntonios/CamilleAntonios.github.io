@@ -1,0 +1,56 @@
+div {
+    position: absolute;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+#poisson {
+    width: 100px;
+    height: 60px;
+    background: grey;
+    z-index: 4000;
+}
+
+#ocean {
+    width: 100%;
+    background: blue;
+    height: 90%;
+    top: 100px;
+}
+
+#sol {
+    height: 100px;
+    width: 100%;
+    bottom: 0px;
+    background: #debe5f;
+}
+
+@keyframes  oceanUpAndDown {
+    from {
+        bottom: -20px;
+    }
+    to {
+        bottom: 0px;
+    }
+}
+
+.dechet {
+    background: green;
+    z-index: 4000;
+    width: 80px;
+    height: 120px;
+}
+
+#soleil {
+    width: 100px;
+    height: 100px;
+    background: yellow;
+    right: 0;
+    top: 0;
+}
