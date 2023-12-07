@@ -8,21 +8,25 @@ body{
 } 
 
 #memory{
+    display: grid;
     grid-column: 1;
     grid-row: 1;
 }
 
 #pendu{
+    display: grid;
     grid-column: 2;
     grid-row: 1;
 }
 
 #jeuPoisson{
+    display: grid;
     grid-column: 1;
     grid-row: 1;
 }
 
 #cliquerNettoyer{
+    display: grid;
     grid-column: 2;
     grid-row: 2;
 }
