@@ -37,13 +37,7 @@ $(() => {
         poissonClass.receiveKeyUp(e)
     })
 
-    setInterval(() => {
-        dechetListe.push(new Dechet())
-        if(dechetListe.length>MAX_DECHETS_DISPLAYED) {
-            //$("#"+dechetListe[0].elDechet.attr("id")).remove()
-            dechetListe.shift()
-        }
-    }, 5000)
+    setInterval(addNewDechetToList, 1500)
 
     setInterval(loop, 1000/FRAMERATE)
 
@@ -52,6 +46,13 @@ function fonctionVictoire(){
     document.getElementById("modal").style.visibility="visible";
 }
 
+function addNewDechetToList() {
+    dechetListe.push(new Dechet())
+    if(dechetListe.length>MAX_DECHETS_DISPLAYED) {
+        //$("#"+dechetListe[0].elDechet.attr("id")).remove()
+        dechetListe.shift()
+    }
+}
 
 function loop() {
     displayMethodsToCall = [poissonClass.computeNextDisplay()]
@@ -73,5 +74,7 @@ function loop() {
     if (poissonClass.isVictoire){
         fonctionVictoire()
         clearInterval(loop)
+        dechetListe=[]
+        clearInterval(addNewDechetToList)
     }
 }
