@@ -23,6 +23,8 @@ let elSol
 
 var dechetListe=[]
 
+let displayMethodsToCall=[]
+
 $(() => {
     poissonClass=new Poisson($("#poisson"))
     elOcean=$("#ocean")
@@ -39,13 +41,11 @@ $(() => {
         poissonClass.receiveKeyUp(e)
     })
 
-    requestAnimationFrame(loop)
-    
     setInterval(() => {
         dechetListe.push(new Dechet())
         if(dechetListe.length>MAX_DECHETS_DISPLAYED) {
             //$("#"+dechetListe[0].elDechet.attr("id")).remove()
-            dechetListe.shift()
+            //dechetListe.shift()
         }
     }, 1000)
     
@@ -58,14 +58,20 @@ function fonctionVictoire(){
 
 }
 function loop() {
-    poissonClass.loop()
+    displayMethodsToCall = [poissonClass.computeNextDisplay()]
+
     for(let dechet of dechetListe) {
-        dechet.loop()
+        displayMethodsToCall.push(dechet.computeNextDisplay())
         collisionDetectee=dechet.checkCollision(poissonClass)
         if(collisionDetectee) {
             alert("COLLISION OMG LE POISSONGGG")
         }
     }
+    displayMethodsToCall[0](poissonClass)
+    for(let i=1; i < displayMethodsToCall.length; i++) {
+        displayMethodsToCall[i](dechetListe[i-1])
+    }
+
     poissonClass.victoire()
     if (!poissonClass.getIsVictoire()){
         setTimeout(() => requestAnimationFrame(loop), 1000/FRAMERATE)

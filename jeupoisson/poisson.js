@@ -1,5 +1,4 @@
 class Poisson {
-
     constructor(elementPoisson) {
         this.goRight=false
         this.goLeft=false
@@ -13,42 +12,69 @@ class Poisson {
         this.width=this.elPoisson.width()
         this.height=this.elPoisson.height()
         this.isVictoire=false
+        this.leftOffset=0
+        this.topOffset=0
     }
 
     get element() {
         return this.elPoisson
     }
 
-    loop() {
-        let leftOffset=retrieveValueWithoutPx(this.elPoisson.css("left"))
-        let topOffset=retrieveValueWithoutPx(this.elPoisson.css("top"))
+    computeNextDisplay() {
+        this.leftOffset=retrieveValueWithoutPx(this.elPoisson.css("left"))
+        this.topOffset=retrieveValueWithoutPx(this.elPoisson.css("top"))
 
 
-        if(goLeft && leftOffset>=horizontalPoissonSpeed) {
-            this.elPoisson.css("left", (-horizontalPoissonSpeed + leftOffset)+"px")
-            this.x=(-horizontalPoissonSpeed + leftOffset)
+        if(goLeft && this.leftOffset>=horizontalPoissonSpeed) {
+            this.x=(-horizontalPoissonSpeed + this.leftOffset)
+            return this.displayMoveLeft
         }
         else if(goLeft) {
-            this.elPoisson.css("left", "0px")
             this.x=0
+            return this.displaySetToZeroLeft
         }
-        else if(goRight && leftOffset<=$("html").width()-this.elPoisson.width()-verticalPoissonSpeed) {
-            this.elPoisson.css("left", (horizontalPoissonSpeed + leftOffset)+"px")
-            this.x=(horizontalPoissonSpeed + leftOffset)
+        else if(goRight && this.leftOffset<=$("html").width()-this.elPoisson.width()-verticalPoissonSpeed) {
+            this.x=(horizontalPoissonSpeed + this.leftOffset)
+            return this.displayMoveRight
         }
         else if(goRight) {
-            this.elPoisson.css("left", ($("html").width()-this.elPoisson.width()) + "px")
             this.x=($("html").width()-this.elPoisson.width())
+            return this.displaySetToZeroRight
         }
 
-        if(goUp && topOffset>=verticalPoissonSpeed) {
-            this.elPoisson.css("top", (-verticalPoissonSpeed + topOffset)+"px")
-            this.y=(-verticalPoissonSpeed + topOffset)
+        if(goUp && this.topOffset>=verticalPoissonSpeed) {
+            this.y=(-verticalPoissonSpeed + this.topOffset)
+            return this.displayMoveUp
         }
-        else if(goDown && topOffset<=elOcean.height() - retrieveValueWithoutPx(elOcean.css("top")) - this.elPoisson.height()-verticalPoissonSpeed) {
-            this.elPoisson.css("top", (verticalPoissonSpeed + topOffset)+"px")
-            this.y=(verticalPoissonSpeed + topOffset)
+        else if(goDown && this.topOffset<=elOcean.height() - retrieveValueWithoutPx(elOcean.css("top")) - this.elPoisson.height()-verticalPoissonSpeed) {
+            this.y=(verticalPoissonSpeed + this.topOffset)
+            return this.displayMoveDown
         }
+        return function() {}
+    }
+
+    displayMoveLeft(poissonParam) {
+        poissonParam.elPoisson.css("left", (-horizontalPoissonSpeed + poissonParam.leftOffset)+"px")
+    }
+
+    displaySetToZeroLeft(poissonParam) {
+        poissonParam.elPoisson.css("left", "0px")
+    }
+
+    displayMoveRight(poissonParam) {
+        poissonParam.elPoisson.css("left", (horizontalPoissonSpeed + poissonParam.leftOffset)+"px")
+    }
+
+    displaySetToZeroRight(poissonParam) {
+        poissonParam.elPoisson.css("left", ($("html").width()-this.elPoisson.width()) + "px")
+    }
+
+    displayMoveUp(poissonParam) {
+        poissonParam.elPoisson.css("top", (-verticalPoissonSpeed + poissonParam.topOffset)+"px")
+    }
+
+    displayMoveDown(poissonParam) {
+        poissonParam.elPoisson.css("top", (verticalPoissonSpeed + poissonParam.topOffset)+"px")
     }
 
     receiveKeyDown(e) {
