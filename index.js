@@ -5,5 +5,5 @@ let cliquerNettoyer = document.getElementById("cliquerNettoyer");
 
 pendu.addEventListener("click",()=> window.location.href="https://camilleantonios.github.io/pendu.html"); 
 memory.addEventListener("click", ()=> window.location.href="https://camilleantonios.github.io/memory.html");
-jeuPoisson.addEventListener("click", ()=> window.location.href="https://camilleantonios.github.io/jeuPoisson.html");
+jeuPoisson.addEventListener("click", ()=> window.location.href="https://camilleantonios.github.io/jeupoisson/index.html");
 cliquerNettoyer.addEventListener("click", ()=> window.location.href="https://camilleantonios.github.io/clic.html");
