@@ -44,6 +44,7 @@ class Dechet {
     }
 
     checkCollision(poisson) {//chat gpt
+        //TODO : Regler le bug de collision qui marche mal horizontalement
         const chevauchementHorizontal =
             this.x < poisson.x + poisson.width &&
             this.x + this.width > poisson.x;
