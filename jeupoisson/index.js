@@ -49,7 +49,11 @@ function fonctionVictoire(){
     document.getElementById("modal").style.visibility="visible";
 }
 function mort(){
-    document.getElementById("modal-failure").style.visibility="visible";
+    document.getElementById("modal-failure").style.visibility="visible"
+    poissonClass.elPoisson.css("transition", "transform 0.3s ease-in-out 0.5s, filter 0.4s, opacity 0.5s ease-in-out 2s")
+    poissonClass.elPoisson.css("transform", "rotate(-1530deg)")
+    poissonClass.elPoisson.css("filter", "grayscale(100%)")
+    poissonClass.elPoisson.css("opacity", "0.0")
 }
 function addNewDechetToList() {
     dechetListe.push(new Dechet())

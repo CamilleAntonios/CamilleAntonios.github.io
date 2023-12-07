@@ -55,26 +55,38 @@ class Poisson {
 
     displayMoveLeft(poissonParam) {
         poissonParam.elPoisson.css("left", (-horizontalPoissonSpeed + poissonParam.leftOffset)+"px")
+        poissonParam.elPoisson.removeClass("poisson-looking-down")
+        poissonParam.elPoisson.removeClass("poisson-looking-up")
     }
 
     displaySetToZeroLeft(poissonParam) {
         poissonParam.elPoisson.css("left", "0px")
+        poissonParam.elPoisson.removeClass("poisson-looking-down")
+        poissonParam.elPoisson.removeClass("poisson-looking-up")
     }
 
     displayMoveRight(poissonParam) {
         poissonParam.elPoisson.css("left", (horizontalPoissonSpeed + poissonParam.leftOffset)+"px")
+        poissonParam.elPoisson.removeClass("poisson-looking-down")
+        poissonParam.elPoisson.removeClass("poisson-looking-up")
     }
 
     displaySetToZeroRight(poissonParam) {
         poissonParam.elPoisson.css("left", ($("html").width()-poissonParam.elPoisson.width()) + "px")
+        poissonParam.elPoisson.removeClass("poisson-looking-down")
+        poissonParam.elPoisson.removeClass("poisson-looking-up")
     }
 
     displayMoveUp(poissonParam) {
         poissonParam.elPoisson.css("top", (-verticalPoissonSpeed + poissonParam.topOffset)+"px")
+        poissonParam.elPoisson.removeClass("poisson-looking-down")
+        poissonParam.elPoisson.addClass("poisson-looking-up")
     }
 
     displayMoveDown(poissonParam) {
         poissonParam.elPoisson.css("top", (verticalPoissonSpeed + poissonParam.topOffset)+"px")
+        poissonParam.elPoisson.addClass("poisson-looking-down")
+        poissonParam.elPoisson.removeClass("poisson-looking-up")
     }
 
     receiveKeyDown(e) {
