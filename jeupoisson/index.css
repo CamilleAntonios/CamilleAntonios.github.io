@@ -32,8 +32,7 @@ body{
 #ocean {
     width: 100%;
     /*background: blue;*/
-    height: 90%;
-    top: 100px;
+    height: 100%;
 }
 
 #sol {
