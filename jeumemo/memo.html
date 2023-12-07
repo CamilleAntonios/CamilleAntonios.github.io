@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Memory</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+</head>
+<body>
+    <h1>Leafy</h1>
+    <div class="memo">
+        <h2 id="memoTitle">The memory game</h1>
+        <div id="memo-start"> 
+              <p class="startText">Dans ce mini jeu tu devras trouver toutes les paires.</p>
+              <p class="startText">En cliquant sur 2 cartes tu verras leur face caché.</p>
+              <p class="startText">Si elles ne sont pas identique, retiens les bien, elle seront remise face caché après quelque secondes.</p>
+              <p class="startText">Si elle sont identique elles resteront face visible et on t'en diras plus sur leur histoire.</p>
+              <p class="startText">Trouve toutes les paires!</p>
+              <p class="startText">Tu remporte la partie en trouvant toutes les paires en moins de 10 essaie.</p>
+              <div id="boutonPlay">
+                <button class="buttonMemo">Play</button>
+              </div>
+        </div>
+        <div id = "memo-play">
+            <div id="reset">
+                <button id="resetbtn">Reset</button>
+            </div>
+            <div id="memo-right">
+                <img class="memoimg" id="memo0" src="./image-memo/card.png">
+                <img class="memoimg" id="memo1" src="./image-memo/card.png">
+                <img class="memoimg" id="memo2" src="./image-memo/card.png">
+                <img class="memoimg" id="memo3" src="./image-memo/card.png">
+                <img class="memoimg" id="memo4" src="./image-memo/card.png">
+                <img class="memoimg" id="memo5" src="./image-memo/card.png">
+                <img class="memoimg" id="memo6" src="./image-memo/card.png">
+                <img class="memoimg" id="memo7" src="./image-memo/card.png">
+                <img class="memoimg" id="memo8" src="./image-memo/card.png">
+                <img class="memoimg" id="memo9" src="./image-memo/card.png">
+            </div>
+            <p id="triesMemo">Il vous reste 6 essaies</p>
+        </div>
+        <div class="modal-wrapper" id="soleil">
+            <div class="modal">
+                <div class="modal-close">X</div>
+                <div class="modal-content">
+                    <h2 id="titre-shop">Fun fact</h2>
+                    <p>blabliblablou</p>
+                </div>
+            </div>
+        </div>
+        <img class="memoimg" id="memoEx" src="./image-memo/card.png">
+    </div>
+</body>
+</html>
