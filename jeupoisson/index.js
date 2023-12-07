@@ -37,13 +37,13 @@ $(() => {
         poissonClass.receiveKeyUp(e)
     })
 
-    /*setInterval(() => {
+    setInterval(() => {
         dechetListe.push(new Dechet())
         if(dechetListe.length>MAX_DECHETS_DISPLAYED) {
             //$("#"+dechetListe[0].elDechet.attr("id")).remove()
-            //dechetListe.shift()
+            dechetListe.shift()
         }
-    }, 1000)*/
+    }, 5000)
 
     setInterval(loop, 1000/FRAMERATE)
 

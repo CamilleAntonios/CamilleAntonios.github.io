@@ -1,8 +1,8 @@
 class Dechet {
     static dechetCounter=0
-    static DECHET_SPEED=4
+    static DECHET_SPEED=3
     static gapFromSides=150
-    static DEFAULT_TOP_GAP=50
+    static DEFAULT_TOP_GAP=0
     constructor() {
         this.isActive=true
         Dechet.dechetCounter++
@@ -14,11 +14,13 @@ class Dechet {
         this.elDechet.css("left", this.x + "px")
         this.elDechet.css("top", this.y+"px")
 
-        $("body").append(this.elDechet)
+        $("#ocean").append(this.elDechet)
 
 
         this.width=this.elDechet.width()
         this.height=this.elDechet.height()
+
+        console.log(this)
     }
 
     static generateRandomPosition() {
