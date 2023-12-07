@@ -4,7 +4,7 @@ const upArrowCode=38
 const downArrowCode=40
 
 const MAX_DECHETS_DISPLAYED=5
-const FRAMERATE=30
+const FRAMERATE=60
 
 const horizontalPoissonSpeed=9
 const verticalPoissonSpeed=4
@@ -30,10 +30,6 @@ $(() => {
     elOcean=$("#ocean")
     elSol=$("#sol")
 
-
-
-    window.requestAnimationFrame(loop)
-
     $("body").on("keydown", (e) => {
         poissonClass.receiveKeyDown(e)
 
@@ -41,22 +37,22 @@ $(() => {
         poissonClass.receiveKeyUp(e)
     })
 
-    setInterval(() => {
+    /*setInterval(() => {
         dechetListe.push(new Dechet())
         if(dechetListe.length>MAX_DECHETS_DISPLAYED) {
             //$("#"+dechetListe[0].elDechet.attr("id")).remove()
             //dechetListe.shift()
         }
-    }, 1000)
-    
+    }, 1000)*/
+
+    setInterval(loop, 1000/FRAMERATE)
+
 })
 function fonctionVictoire(){
-    
     document.getElementById("modal").style.visibility="visible";
-    console.log("soy aqui")
-
-
 }
+
+
 function loop() {
     displayMethodsToCall = [poissonClass.computeNextDisplay()]
 
@@ -73,12 +69,9 @@ function loop() {
     }
 
     poissonClass.victoire()
-    if (!poissonClass.getIsVictoire()){
-        setTimeout(() => requestAnimationFrame(loop), 1000/FRAMERATE)
-    }
-    else{
+
+    if (poissonClass.isVictoire){
         fonctionVictoire()
+        clearInterval(loop)
     }
-    
-    
 }

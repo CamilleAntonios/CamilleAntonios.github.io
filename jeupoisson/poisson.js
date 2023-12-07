@@ -66,7 +66,7 @@ class Poisson {
     }
 
     displaySetToZeroRight(poissonParam) {
-        poissonParam.elPoisson.css("left", ($("html").width()-this.elPoisson.width()) + "px")
+        poissonParam.elPoisson.css("left", ($("html").width()-poissonParam.elPoisson.width()) + "px")
     }
 
     displayMoveUp(poissonParam) {
@@ -110,17 +110,13 @@ class Poisson {
                 break
         }
     }
-    getIsVictoire(){
-        return this.isVictoire;
-    }
-    victoire(){
-        if ((this.x+this.width)==window.innerWidth){
-            this.isVictoire=true;
-            
+
+    victoire() {
+        if((this.x + this.width) >= $("body").width()) {
+            this.isVictoire=true
         }
-        
-    
     }
+
     getPos(){
         console.log("coordonnées: ("+this.x+" ,"+this.y+")\n");
     }
