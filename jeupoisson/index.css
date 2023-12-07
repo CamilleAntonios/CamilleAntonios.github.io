@@ -79,3 +79,22 @@ html, body {
     padding: 15px 25px;
     width: 380px;
 }
+#modal-failure{
+    z-index: 4000;
+    visibility: hidden;
+    display: flex;
+    position : fixed;
+    align-items: center;
+    justify-content: center;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+}
+.modal-inner-failure{
+    background-color: red;
+    border-radius: 5px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.3);
+    padding: 15px 25px;
+    width: 380px;
+}
