@@ -45,7 +45,9 @@ $(() => {
 function fonctionVictoire(){
     document.getElementById("modal").style.visibility="visible";
 }
-
+function mort(){
+    document.getElementById("modal-failure").style.visibility="visible";
+}
 function addNewDechetToList() {
     dechetListe.push(new Dechet())
     if(dechetListe.length>MAX_DECHETS_DISPLAYED) {
@@ -61,7 +63,10 @@ function loop() {
         displayMethodsToCall.push(dechet.computeNextDisplay())
         collisionDetectee=dechet.checkCollision(poissonClass)
         if(collisionDetectee) {
-            alert("COLLISION OMG LE POISSONGGG")
+            mort();
+            clearInterval(loop)
+            dechetListe=[]
+            clearInterval(addNewDechetToList)
         }
     }
     displayMethodsToCall[0](poissonClass)
