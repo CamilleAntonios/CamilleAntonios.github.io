@@ -1,32 +1,87 @@
 body{
-    background-color: aqua;
+    display: grid;
+    background-color: #f1cdc0;
+    grid-template-columns: 1;
+    grid-template-rows: 30vh 30vh 30vh;
+}
+
+header{
+    grid-row:1;
+}
+
+h1{
+    font-family: Impact, fantasy;
+    text-align: center;
+    color: #3dae91;
 }
 
 #grilleJeux{
+    grid-row: 2;
+    display: grid;
     grid-template-columns: 2;
     grid-template-rows: 2;
 } 
 
 #memory{
-    display: grid;
+    font-family: Palatino, URW Palladio L, sans-serif;
+    color: #3dae91;
+    text-align: center;
     grid-column: 1;
     grid-row: 1;
 }
 
 #pendu{
-    display: grid;
+    font-family: Palatino, URW Palladio L, sans-serif;
+    color: #3dae91;
+    text-align: center;
     grid-column: 2;
     grid-row: 1;
 }
 
 #jeuPoisson{
-    display: grid;
+    font-family: Palatino, URW Palladio L, sans-serif;
+    color: #3dae91;
+    text-align: center;
     grid-column: 1;
-    grid-row: 1;
+    grid-row: 2;
 }
 
 #cliquerNettoyer{
-    display: grid;
+    font-family: Palatino, URW Palladio L, sans-serif;
+    color: #3dae91;
+    text-align: center;
     grid-column: 2;
     grid-row: 2;
+}
+
+#Leafy{
+    animation: moveCharacter 6s alternate infinite;
+    position : relative;
+    grid-row:3;
+    margin-top: 0vh;
+    margin-right: 0vw;
+    height: 268px;
+    width:160px;
+    rotate: -15deg;
+}
+
+@keyframes moveCharacter {
+    from {
+      transform: rotate(-15deg);
+     }
+     to {
+      transform: rotate(15deg);
+   }
+} 
+
+#texteLeafy{
+    grid-row: 3;
+    border: solid #3dae91;
+    position: relative;
+    font-family: Palatino, URW Palladio L, sans-serif;
+    color: #3dae91;
+    width: 300px;
+    border-radius: 7px;
+    bottom: 3vh;
+    left :10vw;
 }
