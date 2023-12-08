@@ -22,7 +22,7 @@ let dejatest=  [];
 let win = false;
 let lose = false;
 //dico de mots 
-this.dico = ["WOOL","CROCHET","FASHION","HOOK","HANDMADE","GREEN","SUSTAINABLE","RUNWAY","CATWALK","STAR","SHEEP","CLOTHES"];
+this.dico = ["RECHAUFFEMENT", "ECOLOGIE", "ARBRE", "BIOLOGIQUE", "RECYCLAGE"];
 
 //fonction pour initialiser le jeu
 function newGame(){

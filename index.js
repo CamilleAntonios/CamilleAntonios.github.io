@@ -7,7 +7,7 @@ let texteLeafy = document.getElementById("texteLeafy");
 pendu.addEventListener("click",()=> window.location.href="https://camilleantonios.github.io/jeuPendu/");
 memory.addEventListener("click", ()=> window.location.href="https://camilleantonios.github.io/jeuMemo/");
 jeuPoisson.addEventListener("click", ()=> window.location.href="https://camilleantonios.github.io/jeuPoisson");
-cliquerNettoyer.addEventListener("click", ()=> window.location.href="https://camilleantonios.github.io/jeuNettoyer");
+//cliquerNettoyer.addEventListener("click", ()=> window.location.href="https://camilleantonios.github.io/jeuNettoyer");
 
 pendu.onmouseover = function(){
     texteLeafy.innerText = "Clique sur cette image pour aller vers le jeu du Pendu !";
@@ -27,12 +27,5 @@ jeuPoisson.onmouseover = function(){
     texteLeafy.innerText = "Clique sur cette image pour aller vers le jeu du Poisson !";
 }
 jeuPoisson.onmouseout = function(){
-    texteLeafy.innerText = "Bonjour et bienvenue ! Clique sur une des images pour jouer";
-}
-
-cliquerNettoyer.onmouseover = function(){
-    texteLeafy.innerText = "Clique sur cette image pour aller vers le jeu Cliquer/Nettoyer !";
-}
-cliquerNettoyer.onmouseout = function(){
     texteLeafy.innerText = "Bonjour et bienvenue ! Clique sur une des images pour jouer";
 }

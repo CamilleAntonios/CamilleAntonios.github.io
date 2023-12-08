@@ -9,7 +9,6 @@ html, body {
     grid-template-rows:10vh 3vh 52vh 50vh ;
     grid-row-gap: 0;
     grid-column-gap: 100px;
-    margin: 0;
     max-height: 100%;
     margin : auto;
 }
@@ -61,7 +60,7 @@ button:focus-visible{
 }
 
 h1{
-    padding:auto;
+    padding: auto;
     margin : auto;
     width: 500px;
     color: #3dae91;
@@ -126,7 +125,6 @@ h1{
     grid-row: 1;
     margin: auto;
     color:#3dae91;
-    font-family:Palatino, URW Palladio L, sans-serif;
     font-size: 50px;
 
 }
@@ -216,7 +214,6 @@ h1{
     white-space: nowrap;
     width: 10vh;
     height: 10vh;
-    font-family: Palatino, URW Palladio L, sans-serif;
 }
 
 .lettre:hover {
@@ -271,11 +268,9 @@ h1{
     width:80px;
     height: 30px;
     margin:auto;
-    font-family: Palatino, URW Palladio L, sans-serif;
 }
 
 .text-modal{
-    font-family: Palatino, URW Palladio L, sans-serif;
     margin:auto;
     color:#F1FAEE;
     font-size:50px;
@@ -296,7 +291,6 @@ h1{
     box-shadow: 4px 4px 4px rgb(10, 1, 53, 0.2);
     margin: auto;
     color: white;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 20px;
     display: none;
     justify-content: space-around;
