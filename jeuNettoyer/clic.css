@@ -20,6 +20,9 @@ body {
     height: 50px;
     cursor: pointer;
 }
+#homepage{
+    background-color: #a2f2de;
+}
 .infos {
     display: none;
     text-align: center;

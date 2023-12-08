@@ -200,3 +200,29 @@ div#memo-right {
     grid-row: 3;
     grid-column: 3;
 }
+#modal-info{
+    
+    z-index: 4000;
+    visibility: hidden;
+    display: flex;
+    position : fixed;
+    align-items: center;
+    justify-content: center;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+}
+#modal-close{
+    color:black;
+    background-color: rgb(205, 132, 132);
+    
+}
+.modal-inner-info{
+    z-index: 4001;
+    background-color: aquamarine;
+    border-radius: 5px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.3);
+    padding: 15px 25px;
+    width: 380px;
+}
