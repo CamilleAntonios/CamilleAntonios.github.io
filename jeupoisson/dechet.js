@@ -1,7 +1,7 @@
 class Dechet {
     static dechetCounter=0
     static DECHET_SPEED=3
-    static gapFromSides=150
+    static gapFromSides=200
     static DEFAULT_TOP_GAP=0
     constructor() {
         this.isActive=true
@@ -40,7 +40,7 @@ class Dechet {
     computeNextDisplay() {
         if(this.isActive) {
             let topOffset = retrieveValueWithoutPx(this.elDechet.css("top"))
-            if (topOffset <= window.innerHeight - this.elDechet.height()) {
+            if (topOffset <= $("body").height() - this.elDechet.height()) {
                 this.y=topOffset+Dechet.DECHET_SPEED
             }
             else {

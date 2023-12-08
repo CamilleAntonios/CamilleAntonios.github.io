@@ -13,26 +13,26 @@ pendu.onmouseover = function(){
     texteLeafy.innerText = "Clique sur cette image pour aller vers le jeu du Pendu !";
 }
 pendu.onmouseout = function(){
-    texteLeafy.innerText = "Bonjouer et bienvenue ! Clique sur une des images pour jouer";
+    texteLeafy.innerText = "Bonjour et bienvenue ! Clique sur une des images pour jouer !";
 }
 
 memory.onmouseover = function(){
     texteLeafy.innerText = "Clique sur cette image pour aller vers le jeu du Memory !";
 }
 memory.onmouseout = function(){
-    texteLeafy.innerText = "Bonjouer et bienvenue ! Clique sur une des images pour jouer";
+    texteLeafy.innerText = "Bonjour et bienvenue ! Clique sur une des images pour jouer";
 }
 
 jeuPoisson.onmouseover = function(){
     texteLeafy.innerText = "Clique sur cette image pour aller vers le jeu du Poisson !";
 }
 jeuPoisson.onmouseout = function(){
-    texteLeafy.innerText = "Bonjouer et bienvenue ! Clique sur une des images pour jouer";
+    texteLeafy.innerText = "Bonjour et bienvenue ! Clique sur une des images pour jouer";
 }
 
 cliquerNettoyer.onmouseover = function(){
-    texteLeafy.innerText = "Clique sur cette image pour aller vers le jeu Click et Nettoie !";
+    texteLeafy.innerText = "Clique sur cette image pour aller vers le jeu Cliquer/Nettoyer !";
 }
 cliquerNettoyer.onmouseout = function(){
-    texteLeafy.innerText = "Bonjouer et bienvenue ! Clique sur une des images pour jouer";
+    texteLeafy.innerText = "Bonjour et bienvenue ! Clique sur une des images pour jouer";
 }

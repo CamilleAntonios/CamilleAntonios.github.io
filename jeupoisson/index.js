@@ -40,7 +40,7 @@ $(() => {
         poissonClass.receiveKeyUp(e)
     })
 
-    addDechetsInterval=setInterval(addNewDechetToList, 1500)
+    addDechetsInterval=setInterval(addNewDechetToList, 460)
 
     loopInterval=setInterval(loop, 1000/FRAMERATE)
 

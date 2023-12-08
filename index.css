@@ -2,15 +2,24 @@
     font-family: "Poppins", sans-serif;
 }
 
-body{
-    display: grid;
-    background-color: #f1cdc0;
-    grid-template-columns: 1;
-    grid-template-rows: 30vh 30vh 30vh;
+html {
+    width: 100%;
+    height: 100%;
 }
 
-header{
-    grid-row:1;
+body {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-image: linear-gradient(to bottom right, #f1cdc0, #d4f1c0);
 }
 
 h1{
@@ -19,11 +28,15 @@ h1{
     color: #3dae91;
 }
 
-#grilleJeux{
-    grid-row: 2;
+#grilleJeux {
+    height: 70%;
     display: grid;
-    grid-template-columns: 2;
-    grid-template-rows: 2;
+    grid-row: 2;
+    justify-content: space-evenly;
+    align-items: center;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: repeat(2, 50%);
+    margin-bottom: 100px;
 }
 
 #grilleJeux>div:hover {
@@ -64,12 +77,12 @@ h1{
 
 #Leafy{
     animation: moveCharacter 6s alternate infinite;
-    position : relative;
+    position : absolute;
+    bottom: 10%;
     grid-row:3;
     margin-top: 0vh;
     margin-right: 0vw;
     height: 268px;
-    width:160px;
     rotate: -15deg;
 }
 
@@ -85,11 +98,24 @@ h1{
 #texteLeafy{
     grid-row: 3;
     border: solid #3dae91;
-    position: relative;
+    position: absolute;
     /*font-family: Palatino, URW Palladio L, sans-serif;*/
     color: #3dae91;
     width: 300px;
     border-radius: 7px;
-    bottom: 3vh;
+    padding: 5px;
+    bottom: 5%;
     left :10vw;
+}
+
+.gameDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+
+.gameIcon {
+    max-height: 60%;
+    max-width: 160px;
 }
