@@ -28,8 +28,7 @@ html, body {
 #ocean {
     width: 100%;
     background: blue;
-    height: 90%;
-    top: 100px;
+    height: 100%;
 }
 
 #sol {
@@ -55,14 +54,8 @@ html, body {
     height: 120px;
 }
 
-#soleil {
-    width: 100px;
-    height: 100px;
-    background: yellow;
-    right: 0;
-    top: 0;
-}
-#modal{
+
+#modal {
     z-index: 4000;
     visibility: hidden;
     display: flex;
