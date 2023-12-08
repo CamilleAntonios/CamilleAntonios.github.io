@@ -102,6 +102,12 @@ function Memory(position){
                   else if (memoTries>0){  //Cartes pareil mais il reste des tries
                       memoEnCours=-1;
                       memoWin++;
+                      //alert("fact");
+                      $("#modal-info").css("visibility", "visible")
+                      document.querySelector(".modal-info-close").addEventListener("click",(event)=>{
+                        
+                        $("#modal-info").css("visibility", "hidden")
+                      })
                   }
               }
           }

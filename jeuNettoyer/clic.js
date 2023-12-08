@@ -15,9 +15,10 @@ document.addEventListener("DOMContentLoaded", function () {
     function createTrash() {
         const trash = document.createElement("img");
         const numDechet = (Math.floor(Math.random() * 4) + 1);
-        trash.classList.add(`trash`);
+        
         //trash.src = `./dibujos/dechet${numDechet}.png`;
-        trash.src = `./dibujos/dechet3.png`;
+        trash.src = `./dibujos/dechet3.PNG`;
+        trash.classList.add(`trash`);
         // Position aléatoire
         const randomX = Math.random() * (window.innerWidth - 50);
         const randomY = (RandomIntRange(window.innerHeight/2, window.innerHeight));
