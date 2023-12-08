@@ -3,7 +3,7 @@ class Dechet {
     static DECHET_SPEED=3
     static gapFromSides=200
     static DEFAULT_TOP_GAP=0
-    static dechetsDibujos=["./dibujos/dechet1.png","./dibujos/dechet2.png","./dibujos/dechet3.png","./dibujos/dechet5.png"]
+    static dechetsDibujos=["./dibujos/dechet1.PNG","./dibujos/dechet2.PNG","./dibujos/dechet3.PNG","./dibujos/dechet5.PNG"]
     constructor() {
         this.isActive=true
         Dechet.dechetCounter++
