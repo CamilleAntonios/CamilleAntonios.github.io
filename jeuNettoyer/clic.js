@@ -2,8 +2,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const gameContainer = document.getElementById("gameContainer");
     const numFond = (Math.floor(Math.random() * 3) + 1);
     const body = document.body;
-    const path =  'url("./fond' + numFond + '.jpg")';
-    body.style.backgroundImage = path;
+    //const path =  'url("./fond' + numFond + '.jpg")';
+    //const path="background.jpg"
+    //body.style.backgroundImage = path;
 
 
     for (let i = 0; i < 5; i++) {
@@ -13,13 +14,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function createTrash() {
         const trash = document.createElement("img");
-        const numDechet = (Math.floor(Math.random() * 3) + 1);
+        const numDechet = (Math.floor(Math.random() * 4) + 1);
         trash.classList.add(`trash`);
-        trash.src = `dechet${numDechet}.png`;
+        trash.src = `./dibujos/dechet${numDechet}.png`;
 
         // Position aléatoire
         const randomX = Math.random() * (window.innerWidth - 50);
-        const randomY = Math.random() * (window.innerHeight - 50);
+        const randomY = Math.random() * (window.innerHeight - window.innerHeight/2 -50);
         const taille = (Math.floor(Math.random() * 70) + 30)/100;
 
         trash.style.width = `${taille*80}px`

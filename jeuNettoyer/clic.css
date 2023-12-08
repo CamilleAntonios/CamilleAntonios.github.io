@@ -5,9 +5,9 @@
 body {
     margin: 0;
     overflow: hidden;
-    background-image: url("./fond2.jpg") ;
+    background-image: url("./fond.PNG") ;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size:100%
 }
 .game-container {
     position: relative;
