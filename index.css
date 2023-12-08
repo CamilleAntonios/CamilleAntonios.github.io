@@ -19,7 +19,7 @@ body{
     display: flex;
     flex-direction: column;
     position: relative;
-    background-image: linear-gradient(to bottom right, #f1cdc0, #d4f1c0);
+    background-image: linear-gradient(to bottom right, #d9a796, #bde6a1);
 }
 
 h1{
