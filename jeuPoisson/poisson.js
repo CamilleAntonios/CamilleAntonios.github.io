@@ -124,7 +124,7 @@ class Poisson {
     }
 
     victoire() {
-        if((this.x + this.width) >= $("body").width()) {
+        if((this.x + this.width) >= $("body").width()-160) {
             this.isVictoire=true
         }
     }

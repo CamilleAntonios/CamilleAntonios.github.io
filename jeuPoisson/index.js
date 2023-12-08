@@ -52,7 +52,7 @@ function fonctionVictoire(){
 function mort(){
     document.getElementById("modal-failure").style.visibility="visible"
     poissonClass.elPoisson.css("transition", "transform 0.3s ease-in-out 0.5s, filter 0.4s, opacity 0.7s")
-    poissonClass.elPoisson.css("transform", "rotate(-1530deg)")
+    poissonClass.elPoisson.css("transform", "rotate(-1170deg)")
     poissonClass.elPoisson.css("filter", "grayscale(100%)")
     setTimeout(() => {
         poissonClass.elPoisson.css("background-image", 'url("./dibujos/poissong-mort.png")')

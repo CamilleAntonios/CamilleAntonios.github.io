@@ -116,3 +116,15 @@ body{
 .poisson-looking-up {
     transform: rotate(-25deg);
 }
+
+#arrivalLine {
+    position: absolute;
+    height: 70%;
+    width: 150px;
+    background-image: url("dibujos/treasure.png");
+    background-repeat: round;
+    background-size: contain;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
