@@ -23,7 +23,6 @@ html, body {
     background-repeat: no-repeat;
     transition: transform 0.3s;
     visibility: visible;
-    opacity: 1.0;
 }
 
 #ocean {
