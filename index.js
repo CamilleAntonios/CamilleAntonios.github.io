@@ -1,7 +1,7 @@
-let pendu = document.getElementById("pendu");
-let memory = document.getElementById("memory");
-let jeuPoisson = document.getElementById("jeuPoisson");
-let cliquerNettoyer = document.getElementById("cliquerNettoyer");
+let pendu = document.getElementById("arbre");
+let memory = document.getElementById("carte");
+let jeuPoisson = document.getElementById("poisson");
+let cliquerNettoyer = document.getElementById("balai");
 let texteLeafy = document.getElementById("texteLeafy");
 
 pendu.addEventListener("click",()=> window.location.href="https://camilleantonios.github.io/jeuPendu/");
