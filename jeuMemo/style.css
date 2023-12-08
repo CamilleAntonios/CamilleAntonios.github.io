@@ -2,6 +2,10 @@
     font-family: "Poppins", sans-serif;
 }
 
+button:hover {
+    cursor: pointer;
+}
+
 h1 {
     font-size: xxx-large;
     color: #3dae91;
@@ -18,18 +22,42 @@ h1 {
     border-radius: 20px;
     width: 83%;
     margin: auto;
+    position: relative;
+    height: 60%;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    background-image: linear-gradient(to top left, #f1cdc0, #d4f1c0);
+    overflow: hidden;
 }
 
 body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    overflow-y: scroll;
+}
+
+#main {
     min-width: 726px;
     max-width: 1250px;
+    height: 100%;
     display: block;
-    margin: 8px;
-    background: #f1cdc0;
+    margin: auto;
 }
+
 div#memo-start {
-    padding: 10px 36px;
     font-size: larger;
+    transition: opacity 0.7s;
+    width: 90%;
+    position: absolute;
+    z-index: 4000;
+    margin-left: 30px;
 }
 p.startText {
     margin: 13px 0px;
@@ -48,17 +76,22 @@ div#boutonPlay {
 }
 
 #memo-play{
+    opacity: 0;
+    transition: opacity 0.7s;
+    position: absolute;
     display: none;
+    flex-direction: column;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 button.buttonMemo {
     margin-left: auto;
     margin-right: auto;
-    width: 107px;
-    background-color: #f1cdc0;
     font-size: xx-large;
     color: #3dae91;
     border: 5px solid #114c3d;
+    padding: 10px;
     border-radius: 10px;
 }
 
@@ -70,23 +103,29 @@ div#boutonPlay {
 #resetbtn {
     margin-left: auto;
     margin-right: auto;
-    width: 107px;
-    background-color: #f1cdc0;
     font-size: xx-large;
     color: #3dae91;
     border: 5px solid #114c3d;
     border-radius: 10px;
+    padding: 10px;
+    text-align: center;
 }
+
+#resetbtn:hover {
+    cursor: pointer;
+}
+
 #reset {
     margin-left: 30px;
     width: 107px;
+    margin-bottom: 20px;
 }
 p#triesMemo {
-    width: 205px;
     margin-right: auto;
     margin-left: auto;
     padding: 10px 36px;
     font-size: larger;
+    text-align: center;
 }
 .memoimg {
     height: 180px;
@@ -96,9 +135,15 @@ p#triesMemo {
     background-color: #24977a;
 }
 
+.memoimg:hover {
+    cursor: pointer;
+}
+
 div#memo-right {
-    padding-top: 10px;
-    padding-left: 2%;
+    margin: auto 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
 }
 
 #memoEx{
@@ -144,4 +189,14 @@ div#memo-right {
     cursor: pointer;
     width: 20px;
     border-radius: 5px;
+}
+
+#memo8 {
+    grid-row: 3;
+    grid-column: 2;
+}
+
+#memo9 {
+    grid-row: 3;
+    grid-column: 3;
 }
