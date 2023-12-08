@@ -5,7 +5,7 @@ let cliquerNettoyer = document.getElementById("balai");
 let texteLeafy = document.getElementById("texteLeafy");
 
 pendu.addEventListener("click",()=> window.location.href="https://camilleantonios.github.io/jeuPendu/");
-memory.addEventListener("click", ()=> window.location.href="https://camilleantonios.github.io/jeuMemory/");
+memory.addEventListener("click", ()=> window.location.href="https://camilleantonios.github.io/jeuMemo/");
 jeuPoisson.addEventListener("click", ()=> window.location.href="https://camilleantonios.github.io/jeuPoisson");
 cliquerNettoyer.addEventListener("click", ()=> window.location.href="https://camilleantonios.github.io/jeuNettoyer");
 
