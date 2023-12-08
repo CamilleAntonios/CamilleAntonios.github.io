@@ -4,10 +4,10 @@ let jeuPoisson = document.getElementById("jeuPoisson");
 let cliquerNettoyer = document.getElementById("cliquerNettoyer");
 let texteLeafy = document.getElementById("texteLeafy");
 
-pendu.addEventListener("click",()=> window.location.href="https://camilleantonios.github.io/pendu.html"); 
-memory.addEventListener("click", ()=> window.location.href="https://camilleantonios.github.io/memory.html");
-jeuPoisson.addEventListener("click", ()=> window.location.href="https://camilleantonios.github.io/jeupoisson/index.html");
-cliquerNettoyer.addEventListener("click", ()=> window.location.href="https://camilleantonios.github.io/clic.html");
+pendu.addEventListener("click",()=> window.location.href="https://camilleantonios.github.io/jeuPendu/");
+memory.addEventListener("click", ()=> window.location.href="https://camilleantonios.github.io/jeuMemory/");
+jeuPoisson.addEventListener("click", ()=> window.location.href="https://camilleantonios.github.io/jeuPoisson");
+cliquerNettoyer.addEventListener("click", ()=> window.location.href="https://camilleantonios.github.io/jeuNettoyer");
 
 pendu.onmouseover = function(){
     texteLeafy.innerText = "Clique sur cette image pour aller vers le jeu du Pendu !";
