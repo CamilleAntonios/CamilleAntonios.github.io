@@ -104,7 +104,7 @@ function Memory(position){
                       memoWin++;
                       //alert("fact");
                       $("#modal-info").css("visibility", "visible")
-                      document.querySelector(".modal-info-close").addEventListener("click",(event)=>{
+                      document.querySelector("#modal-info-close").addEventListener("click",(event)=>{
                         
                         $("#modal-info").css("visibility", "hidden")
                       })
