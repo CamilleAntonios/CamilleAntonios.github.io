@@ -18,7 +18,7 @@ html, body {
     width: 100px;
     height: 60px;
     z-index: 4000;
-    background-image: url("./poissong.png");
+    background-image: url("./poissong.gif");
     background-size: contain;
     background-repeat: no-repeat;
     transition: transform 0.3s;
